@@ -1,0 +1,48 @@
+﻿@model HW_26.Models.Product
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    <div class="panel panel-success">
+        <div class="panel-heading text-center"><h4>Редактировать</h4></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="Edit" asp-controller="Home" asp-antiforgery="true">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="Name">Имя продукта</label>
+                    <input class="form-control" type="text" asp-for="Name" value="@Model.Name" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Category">Тип продукта</label>
+                    <select name="id" class="form-control">
+                        @foreach (var x in ViewBag.Cate)
+                        {
+                            <option value="@x.CategoryId">
+                                @x.List
+                            </option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price">Цена</label>
+                    <input class="form-control" type="number" asp-for="Price" value="@Model.Price" />
+                </div>
+                <div class="text-center">
+                    <input type="submit" value="Edit" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div>
+        @Html.ActionLink("На главную", "Index")
+    </div>
+</body>
+</html>
