@@ -12,9 +12,10 @@
     <div class="panel panel-success">
         <div class="panel-heading text-center"><h4>Редактировать</h4></div>
         <div class="panel-body">
-            <form class="p-a-1" asp-action="Edit" asp-controller="Home" asp-antiforgery="true">
+            <form class="p-a-1" asp-action="Edit" asp-controller="Home" asp-antiforgery="true" >
                 <div asp-validation-summary="All"></div>
                 <div class="form-group">
+                    <input type="hidden" asp-for="ProductId" value="@Model.ProductId" />
                     <label asp-for="Name">Имя продукта</label>
                     <input class="form-control" type="text" asp-for="Name" value="@Model.Name" />
                 </div>
@@ -31,7 +32,7 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Price">Цена</label>
-                    <input class="form-control" type="number" asp-for="Price" value="@Model.Price" />
+                    <input class="form-control" type="text" asp-for="Price" value="@Model.Price" />
                 </div>
                 <div class="text-center">
                     <input type="submit" value="Edit" class="btn btn-primary" />

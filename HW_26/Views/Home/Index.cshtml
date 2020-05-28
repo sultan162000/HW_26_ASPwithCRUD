@@ -1,18 +1,53 @@
-﻿@{
+﻿@model IEnumerable<HW_26.Models.Product>
+@{
     ViewData["Title"] = "Home Page";
 }
-<!DOCTYPE html>
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Главная</title>
-    <link rel="stylesheet" href="/liЬ/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
     <div class="center-block">
         <a class="btn btn-primary" asp-action="Create">Добавить</a>
-        <a class="btn btn-primary" asp-action="ShowDate">Показать всех</a>
     </div>
+    <div class="panel-body">
+        <h2>Товары</h2>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Имя</td>
+                    <td>Цена</td>
+                    <td>Категория</td>
+                </tr>
+            </thead>
 
+            @if (Model.Count() == 0)
+            {
+                <h1 class="text-center">Пусто</h1>
+
+            }
+            else
+            {
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.ProductId</td>
+                            <td>@item.Name</td>
+                            <td>@item.Price</td>
+                            <td>@item.Category.List</td>
+                            <td><a asp-action="Edit" asp-controller="Home" asp-route-id="@item.ProductId">Редактировать</a> <a asp-action="Remove" asp-controller="Home" asp-route-id="@item.ProductId">Удалить</a></td>
+                        </tr>
+                    }
+                </tbody>
+            }
+
+
+        </table>
+    </div>
 </body>
 </html>
