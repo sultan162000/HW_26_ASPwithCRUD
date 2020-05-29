@@ -26,3 +26,4 @@ C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\Sha
 C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
 C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
 C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\Home\Edit.g.cshtml.cs
+C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\Home\Show.g.cshtml.cs

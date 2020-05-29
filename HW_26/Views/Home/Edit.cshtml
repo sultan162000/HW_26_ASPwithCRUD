@@ -22,7 +22,7 @@
                 <div class="form-group">
                     <label asp-for="Category">Тип продукта</label>
                     <select name="id" class="form-control">
-                        @foreach (var x in ViewBag.Cate)
+                        @foreach (var x in ViewBag.Cates)
                         {
                             <option value="@x.CategoryId">
                                 @x.List
