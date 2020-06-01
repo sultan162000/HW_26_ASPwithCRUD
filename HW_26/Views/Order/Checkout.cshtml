@@ -1,0 +1,19 @@
+﻿@model  Order
+
+<h2>Оформить заказ</h2>
+<p>Введите все данные чтоб оформит ваш заказ</p>
+<form asp-action="Checkout" method="post">
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label>Ваш Адрес:</label><input asp-for="Address" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label>Ваш номер телефона:</label><input asp-for="Number" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Дата доставки</label><input asp-for="dateTime" type="date" value="@DateTime.Now" min="@DateTime.Now" max="2021-12-31">
+    </div>
+    <div class="text-center">
+        <input class="btn btn-primary" type="submit" value="Добавить" />
+    </div>
+</form>

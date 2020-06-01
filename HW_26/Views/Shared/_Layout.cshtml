@@ -1,15 +1,11 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - HW_26</title>
-    
-</head>
-<body>
-    <div>
-        @RenderBody()
-    </div>
+﻿<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.css" />
 
-</body>
-</html>
+    <title>Мини-Маркет</title>
+</head>
+<div>
+  @RenderBody()
+</div>
+ <div>@Html.ActionLink("На главную", "Index","Client")</div>
+ <div>@Html.ActionLink("Админ панел", "Index", "Home")</div>

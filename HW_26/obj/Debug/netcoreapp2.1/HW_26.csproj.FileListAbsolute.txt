@@ -26,4 +26,9 @@ C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\Sha
 C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
 C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
 C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\Home\Edit.g.cshtml.cs
-C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\Home\Show.g.cshtml.cs
+C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\Client\Index.g.cshtml.cs
+C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Index.g.cshtml.cs
+C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\Shared\ProductSummary.g.cshtml.cs
+C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\CartSummary\Default.g.cshtml.cs
+C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\Order\Checkout.g.cshtml.cs
+C:\Users\Sultan\source\repos\HW_26\HW_26\obj\Debug\netcoreapp2.1\Razor\Views\Order\Thanks.g.cshtml.cs

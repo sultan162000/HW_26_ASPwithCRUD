@@ -1,0 +1,51 @@
+﻿@model HW_26.Models.CartIndexViewМodel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Корзина</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Количество</th>
+            <th>Имя</th>
+            <th class="text-right">Цена</th>
+            <th class="text-right">Общая цена</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model.Cart.Lines)
+        {
+            <tr>
+                <td class="text-center">@i.Quantity</td>
+                <td class="text-left">@i.Product.Name</td>
+                <td class="text-right">@i.Product.Price</td>
+                <td class="text-right">
+                    @((i.Quantity*i.Product.Price).ToString())
+                </td>
+                <td>
+                    <form asp-action="RemoveFromCart" method="post">
+                        <input type="hidden" name="ProductId" value="@i.Product.ProductId" />
+                        <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            Удалить
+                        </button>
+
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Total:</td>
+            <td class="text-right">
+                @Model.Cart.SumOFProduct()
+            </td>
+        </tr>
+    </tfoot>
+</table>
+<div class="text-center">
+    <a class="btn btn-primary" href="@Model.ReturnUrl">Продолжить покупку</a>
+    <a class="btn btn-primary" asp-action="Checkout" asp-controller="Order">Оплатить</a>
+</div>

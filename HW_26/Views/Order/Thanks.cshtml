@@ -1,0 +1,11 @@
+﻿@model Order
+@{
+    ViewData["Title"] = "Thanks";
+}
+<div class="text-center">
+    <h2>Спасибо!</h2>
+    <p>Мы доставим ваш заказ в @Model.dateTime на Адрес @Model.Address</p>
+</div>
+
+
+<div>@Html.ActionLink("На главную", "Index", "Client")</div>

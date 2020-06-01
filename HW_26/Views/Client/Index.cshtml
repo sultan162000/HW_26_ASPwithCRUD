@@ -1,0 +1,43 @@
+﻿@model IEnumerable<HW_26.Models.Product>
+@{ 
+    Layout = null;
+}
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" asp-href-include="/lib/fontawesome/css/*.css" />
+    <title>Мини-Маркет</title>
+</head>
+<body>
+    <div class="navbar navbar-inverse bg-dark" role="navigation">
+        <div class="row">
+            <a class="col navbar-brand" asp-controller="Client" asp-action="Index">Мини-Маркет</a>
+            <a class="col navbar-brand" asp-controller="Home" asp-action="Index">Админ-панель</a>
+            <div class="col-4 text-left">
+                @await Component.InvokeAsync("CartSummary")
+            </div>
+        </div>
+        
+    </div>
+    <div class="row m-1 р-1">
+        <div id="categories" class="col-3">
+            <form asp-action="Index" asp-controller="Client" method="get">
+                <select class="custom-select" name="category" multiple>
+                    <option selected></option>
+                    @foreach (var x in ViewBag.Li)
+                    {
+                        <option>@x.List.ToString()</option>
+                    }
+                </select>
+                <input type="submit" value="Фильтр" />
+            </form>
+        </div>
+        <div class="col-9">
+            @foreach (var i in Model)
+            {
+                @Html.Partial("ProductSummary", i);
+            }
+        </div>
+    </div>
+</body>
+

@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-    <div class="center-block">
-        <a class="btn btn-primary" asp-action="Create">Добавить</a>
+    <div class="navbar navbar-inverse bg-inverse" role="navigation">
+        <a class="navbar-brand" asp-controller="Client" asp-action="Index">Мини-Маркет</a>
+        <a class="navbar-brand" asp-action="Create">Добавить</a>
     </div>
     <div class="panel-body">
 
         <h2>Товары</h2>
-        <form asp-action="Index" asp-controller="Home" >
+        <form asp-action="Index" asp-controller="Home">
             <select class="form-control" name="fil">
                 <option value="All">All</option>
                 @foreach (var x in ViewBag.Cate)
@@ -26,7 +27,7 @@
             </select>
             <input type="submit" value="Фильтр" />
         </form>
-        
+
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
